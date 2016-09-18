@@ -28,11 +28,11 @@ function reuseExistingTab (browserSync, urlToOpen) {
 
     exec(command, { stdio: 'ignore' }, function (error) {
       if (error) {
-        var message = '{red:browser-sync-reuse-tab failed to re-use the exisiting tab :( The error was:\n\n'
+        var message = '{red:browser-sync-reuse-tab failed to re-use the existing tab :( The error was:\n\n'
 
-        message += error.message
+        message += error.message + '}'
 
-        browserSyncInstance.logger.info(message + '}')
+        browserSyncInstance.logger.info(message)
 
         browserSyncInstance.options = browserSyncInstance.options.set('open', true)
         browserSyncUtils.openBrowser(url, browserSyncInstance.options)
