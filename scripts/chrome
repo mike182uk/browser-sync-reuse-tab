@@ -1,0 +1,67 @@
+#!/usr/bin/env osascript -l JavaScript
+
+/* global Application */
+
+/**
+ * Google Chrome application instance
+ *
+ * @type {Application}
+ */
+var Chrome = Application('Chrome')
+
+/**
+ * Main
+ *
+ * @param {object} argv
+ */
+
+/* eslint-disable no-unused-vars */
+function run (argv) {
+  /* eslint-enable no-unused-vars */
+
+  var url = argv[0]
+  var tabData = findTabForUrl(url)
+
+  if (tabData) {
+    // set the front window active tab
+    Chrome.windows[tabData.windowKey].activeTabIndex = tabData.tabKey + 1
+
+    // reload the tab
+    tabData.tab.reload()
+
+    // bring the window that the tab is in to the front
+    Chrome.windows[tabData.windowKey].index = 1
+  } else {
+    // create tab
+    var tab = Chrome.Tab({url})
+
+    // add tab to front window, making it the active tab
+    Chrome.windows[0].tabs.push(tab)
+  }
+}
+
+/**
+ * Find a tab for a given URL
+ *
+ * @param  {string} url
+ * @return {object}
+ */
+function findTabForUrl (url) {
+  var urlPattern = new RegExp(`^${url}.*`)
+
+  for (var i = 0; i < Chrome.windows.length; i++) {
+    var currentWindow = Chrome.windows[i]
+
+    for (var j = 0; j < currentWindow.tabs.length; j++) {
+      var currentTab = currentWindow.tabs[j]
+
+      if (urlPattern.test(currentTab.url())) {
+        return {
+          windowKey: i,
+          tabKey: j,
+          tab: currentTab
+        }
+      }
+    }
+  }
+}

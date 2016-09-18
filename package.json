@@ -1,0 +1,39 @@
+{
+  "name": "browser-sync-reuse-tab",
+  "version": "1.0.0",
+  "description": "Attempt to reuse an existing tab that was opened by BrowserSync",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard index.js scripts/*"
+  },
+  "author": "Michael David Barrett <mike182uk@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mike182uk/browser-sync-reuse-tab.git"
+  },
+  "homepage": "https://github.com/mike182uk/browser-sync-reuse-tab",
+  "bugs": {
+    "url": "https://github.com/mike182uk/browser-sync-reuse-tab/issues"
+  },
+  "keywords": [
+    "browser-sync",
+    "browsersync",
+    "browser sync",
+    "browser sync reuse tab",
+    "reuse tab",
+    "browser",
+    "sync",
+    "reuse",
+    "tab"
+  ],
+  "engines": {
+    "node": ">=0.10"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.16.0",
+    "standard": "^8.1.0"
+  },
+  "dependencies": {
+  }
+}
