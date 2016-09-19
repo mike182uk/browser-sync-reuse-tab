@@ -5,11 +5,11 @@
 [![npm](https://img.shields.io/npm/dm/browser-sync-reuse-tab.svg?style=flat-square)](https://www.npmjs.com/package/browser-sync-reuse-tab)
 [![License](https://img.shields.io/github/license/mike182uk/browser-sync-reuse-tab.svg?style=flat-square)](https://www.npmjs.com/package/browser-sync-reuse-tab)
 
-Attempt to reuse an existing tab that was opened by BrowserSync.
+Attempt to reuse an existing tab that was opened by [BrowserSync](https://www.browsersync.io/).
 
 Depending on your configuration, when you start BrowserSync, a tab is opened in your browser pointing to BrowserSync. When you restart BrowserSync another tab is opened in the browser. The more times you restart BrowserSync, the more tabs that will be opened in the browser.
 
-This package fixes this problem by trying to reuse an existing tab that was already opened by BrowserSync. When you restart BrowserSync, the previously opened tab will be focused and reloaded. The window that the tab is in will also be focused.
+This package gets around this by trying to reuse an existing tab that was already opened by BrowserSync. When you restart BrowserSync, the previously opened tab will be focused and reloaded. The window that the tab is in will also be focused.
 
 Hardly a first world problem, but it bugged me enough to go ahead and hack my way around it :)
 
@@ -42,7 +42,7 @@ var browserSync = require('browser-sync').create()
 var browserSyncReuseTab = require('browser-sync-reuse-tab')(browserSync, 'external') // open the external URL when browserSync starts
 
 browserSync.init({
-  server: "./app",
+  server: './src',
   open: false // do not automatically open browser
 }, browserSyncReuseTab)
 ```
