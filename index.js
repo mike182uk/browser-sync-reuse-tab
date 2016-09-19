@@ -16,6 +16,8 @@ module.exports = reuseExistingTab
  */
 
 function reuseExistingTab (browserSync, urlToOpen) {
+  if (urlToOpen === false) return
+
   var browserSyncInstance = browserSync.instance
   urlToOpen = urlToOpen || 'local'
 
