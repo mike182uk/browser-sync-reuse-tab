@@ -1,6 +1,6 @@
+var browserSyncUtils = require('browser-sync/lib/utils')
 var exec = require('child_process').exec
 var path = require('path')
-var browserSyncUtils = require('browser-sync/lib/utils')
 
 /**
  * Exports
@@ -28,12 +28,15 @@ function reuseExistingTab (browserSync, urlToOpen) {
 
     exec(command, { stdio: 'ignore' }, function (error) {
       if (error) {
-        var message = '{red:browser-sync-reuse-tab failed to re-use the existing tab :( The error was:\n\n'
+        // log message to console
+        var message = '{red:browser-sync-reuse-tab failed to reuse the existing tab :( The error was:\n\n'
 
-        message += error.message + '}'
+        message += error.message
+        message += '}'
 
         browserSyncInstance.logger.info(message)
 
+        // fallback to default BrowserSync behaviour
         browserSyncInstance.options = browserSyncInstance.options.set('open', true)
         browserSyncUtils.openBrowser(url, browserSyncInstance.options)
       }
