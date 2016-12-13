@@ -11,8 +11,6 @@ Depending on your configuration, when you start BrowserSync, a tab is opened in 
 
 This package gets around this by trying to reuse an existing tab that was already opened by BrowserSync. When you restart BrowserSync, the previously opened tab will be focused and reloaded. The window that the tab is in will also be focused.
 
-Hardly a first world problem, but it bugged me enough to go ahead and hack my way around it :)
-
 **At this moment, only Google Chrome on OS X >= 10.10 is supported, see notes below.**
 
 ## Installation
