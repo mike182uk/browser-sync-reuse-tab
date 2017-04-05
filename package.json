@@ -32,6 +32,6 @@
   },
   "devDependencies": {
     "browser-sync": "^2.16.0",
-    "standard": "^9.0.0"
+    "standard": "^10.0.0"
   }
 }
