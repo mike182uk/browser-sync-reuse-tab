@@ -12,7 +12,7 @@ var Chrome = Application('Chrome')
 /**
  * Main
  *
- * @param {object} argv
+ * @param {Object} argv
  */
 
 /* eslint-disable no-unused-vars */
@@ -43,8 +43,8 @@ function run (argv) {
 /**
  * Find a tab for a given URL
  *
- * @param  {string} url
- * @return {object}
+ * @param  {String} url
+ * @return {Object}
  */
 function findTabForUrl (url) {
   var urlPattern = new RegExp(`^${url}.*`)

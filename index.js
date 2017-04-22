@@ -12,14 +12,15 @@ module.exports = reuseExistingTab
  * Attempt to reuse an existing tab that was opened by BrowserSync
  *
  * @param {BrowserSync} browserSync
- * @param {string} urlToOpen
+ * @param {String} urlToOpen
  */
 
 function reuseExistingTab (browserSync, urlToOpen) {
   if (urlToOpen === false) return
 
-  var browserSyncInstance = browserSync.instance
   urlToOpen = urlToOpen || 'local'
+
+  var browserSyncInstance = browserSync.instance
 
   return function () {
     var url = browserSyncInstance.options
@@ -31,10 +32,7 @@ function reuseExistingTab (browserSync, urlToOpen) {
     exec(command, { stdio: 'ignore' }, function (error) {
       if (error) {
         // log message to console
-        var message = '{red:browser-sync-reuse-tab failed to reuse the existing tab :( The error was:\n\n'
-
-        message += error.message
-        message += '}'
+        var message = '{red:browser-sync-reuse-tab failed to reuse the existing tab :( The error was:\n\n' + error.message + '}'
 
         browserSyncInstance.logger.info(message)
 
