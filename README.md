@@ -1,5 +1,7 @@
 # browser-sync-reuse-tab
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/mike182uk/browser-sync-reuse-tab.svg)](https://greenkeeper.io/)
+
 [![Version](https://img.shields.io/npm/v/browser-sync-reuse-tab.svg?style=flat-square)](https://www.npmjs.com/package/browser-sync-reuse-tab)
 [![Build Status](https://img.shields.io/travis/mike182uk/browser-sync-reuse-tab.svg?style=flat-square)](http://travis-ci.org/mike182uk/browser-sync-reuse-tab)
 [![npm](https://img.shields.io/npm/dm/browser-sync-reuse-tab.svg?style=flat-square)](https://www.npmjs.com/package/browser-sync-reuse-tab)
