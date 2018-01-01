@@ -1,4 +1,4 @@
-var browserSyncUtils = require('browser-sync/lib/utils')
+var browserSyncUtils = require('browser-sync/dist/utils')
 var exec = require('child_process').exec
 var path = require('path')
 

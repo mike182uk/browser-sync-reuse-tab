@@ -1,6 +1,6 @@
 {
   "name": "browser-sync-reuse-tab",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Attempt to reuse an existing tab that was opened by BrowserSync",
   "main": "index.js",
   "scripts": {
