@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.0.0
+## 1.0.1
 
 Update reference to BrowserSync utils module
 
