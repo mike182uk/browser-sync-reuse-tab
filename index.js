@@ -1,6 +1,14 @@
-var browserSyncUtils = require('browser-sync/dist/utils')
 var exec = require('child_process').exec
 var path = require('path')
+
+var browserSyncUtils = {}
+
+try {
+  browserSyncUtils = require('browser-sync/lib/utils')
+} catch (e) {
+  // BrowserSync utils moved in a later version of BrowserSync
+  browserSyncUtils = require('browser-sync/dist/utils')
+}
 
 /**
  * Exports
