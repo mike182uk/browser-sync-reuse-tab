@@ -1,3 +1,5 @@
+#### ⚠️ This project is no longer maintained
+
 # browser-sync-reuse-tab
 
 [![Version](https://img.shields.io/npm/v/browser-sync-reuse-tab.svg?style=flat-square)](https://www.npmjs.com/package/browser-sync-reuse-tab)
